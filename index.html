@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Butik Blanco - Moda Włoska i Polska</title>
+    <!-- Favicon / ikonka w przeglądarce -->
+    <link rel="icon" href="logo.jpg" sizes="any">
+    <link rel="apple-touch-icon" href="logo.jpg">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'logo': ['"Dancing Script"', 'cursive'],
+                        'body': ['"Montserrat"', 'sans-serif'],
+                    },
+                    colors: {
+                        'blanco-black': '#111111',
+                        'blanco-gold': '#d4af37', // Opcjonalny akcent
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Drobne poprawki, np. płynne przewijanie */
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="font-body text-gray-800 antialiased">
+
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100 shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="flex items-center gap-3">
+                        <img src="logo.jpg" alt="Butik Blanco" class="w-12 h-12 rounded-full object-cover border border-gray-100 shadow-sm">
+                        <span class="font-logo text-3xl text-black hidden sm:block">Butik Blanco</span>
+                        <span class="sr-only">Butik Blanco</span>
+                    </a>
+                </div>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="#karuzela" class="text-gray-600 hover:text-black uppercase text-xs tracking-widest font-semibold transition">Galeria</a>
+                    <a href="#o-nas" class="text-gray-600 hover:text-black uppercase text-xs tracking-widest font-semibold transition">O nas</a>
+                    <a href="#kontakt" class="text-gray-600 hover:text-black uppercase text-xs tracking-widest font-semibold transition">Kontakt</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative h-screen min-h-[600px] flex items-center justify-center bg-cover bg-center bg-fixed" 
+            style="background-image: url('https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=2070&auto=format&fit=crop');">
+        
+        <div class="absolute inset-0 bg-black/40"></div> <div class="relative z-10 text-center text-white px-4">
+            <h1 class="font-logo text-6xl md:text-8xl mb-4 drop-shadow-lg">Butik Blanco</h1>
+            <p class="text-lg md:text-xl font-light uppercase tracking-[0.2em] mb-8">Moda Damska i Męska | Włoszczowa</p>
+            <a href="#kontakt" class="border-2 border-white text-white px-8 py-3 uppercase text-sm tracking-widest hover:bg-white hover:text-black transition duration-300">
+                Odwiedź nas
+            </a>
+        </div>
+    </header>
+
+    <section id="o-nas" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold uppercase tracking-widest mb-6">Nasz Styl</h2>
+            <p class="text-gray-600 mb-8 leading-relaxed">Jesteśmy niewielką, rodzinną firmą obecną na lokalnym rynku od ponad 10 lat. Selekcjonujemy ubrania ze szczególną dbałością o jakość i zgodność z aktualnymi trendami. Dzięki regularnym dostawom nasza oferta jest zawsze świeża i inspirująca.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="p-6">
+                    <div class="mb-4">
+                        <svg class="w-12 h-12 mx-auto" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <rect x="2" y="5" width="6.66" height="10" fill="#009246" rx="0.5"/>
+                            <rect x="8.66" y="5" width="6.66" height="10" fill="#FFFFFF" rx="0.5"/>
+                            <rect x="15.32" y="5" width="6.66" height="10" fill="#CE2B37" rx="0.5"/>
+                            <rect x="2" y="5" width="19" height="10" fill="none" stroke="currentColor" stroke-width="0.4" rx="0.5" class="text-blanco-gold"/>
+                        </svg>
+                    </div>
+                        <h3 class="text-xl font-semibold mb-2">Włoska Moda</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed">Unikalne fasony i najwyższa jakość materiałów prosto z Włoch. Poczuj się wyjątkowo w każdej sytuacji.</p>
+                </div>
+                <div class="p-6">
+                        <div class="mb-4">
+                            <svg class="w-12 h-12 mx-auto" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <rect x="3" y="5" width="18" height="6" fill="#ffffff"/>
+                                <rect x="3" y="11" width="18" height="6" fill="#DC143C"/>
+                                <rect x="3" y="5" width="18" height="12" fill="none" stroke="currentColor" stroke-width="0.4" class="text-blanco-gold"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Polska Produkcja</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed">Wspieramy rodzimych producentów. Znajdziesz u nas również tarannie wyselekcjonowane kolekcje polskich marek.</p>
+                </div>
+                <div class="p-6">
+                        <div class="mb-4">
+                            <img src="assets/icons/dress.svg" alt="Dla Niej i Dla Niego" class="w-12 h-12 mx-auto text-blanco-gold" style="filter:invert(0.15) drop-shadow(0 1px 0 rgba(0,0,0,0.06));">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Dla Niej i Dla Niego</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed">Kompleksowa oferta odzieży, obuwia i dodatków. Ubierzemy Cię od stóp do głów.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Karuzela obrazów z folderu images -->
+    <section id="karuzela" class="py-12 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-2xl font-bold uppercase tracking-widest mb-6 text-center">Galeria</h2>
+            <div class="relative">
+                <img id="carousel-img" src="" alt="Galeria" class="w-full h-80 md:h-[500px] object-cover rounded-lg shadow-md transition-opacity duration-500" style="opacity:0;">
+                <button id="prev" class="absolute left-3 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white px-3 py-2 rounded-full shadow">‹</button>
+                <button id="next" class="absolute right-3 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white px-3 py-2 rounded-full shadow">›</button>
+                <div id="carousel-counter" class="absolute left-1/2 -translate-x-1/2 bottom-3 bg-black/60 text-white text-xs px-3 py-1 rounded-full">0/0</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt" class="bg-white py-20">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                
+                <div>
+                    <h2 class="font-logo text-5xl mb-6">Wpadnij do nas!</h2>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        Szukasz idealnej kreacji na wieczór, a może wygodnego zestawu na co dzień? 
+                        Doradzimy i pomożemy dobrać dodatki. Czekamy na Ciebie we Włoszczowie.
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <span class="font-bold w-24 uppercase text-xs tracking-widest mt-1">Adres:</span>
+                            <span>ul. Czarnieckiego 1<br>29-100 Włoszczowa</span>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="font-bold w-24 uppercase text-xs tracking-widest mt-1">Kontakt:</span>
+                            <a href="https://www.facebook.com/ButikBlanco" class="hover:underline">Napisz do nas na Messengerze</a>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="font-bold w-24 uppercase text-xs tracking-widest mt-1">Social:</span>
+                            <div class="flex gap-4">
+                                <a href="https://www.facebook.com/ButikBlanco" class="text-gray-500 hover:text-black transition">Facebook</a>
+                                <a href="https://www.instagram.com/butik_blanco_/" class="text-gray-500 hover:text-black transition">Instagram</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="h-[350px] w-full bg-gray-200 rounded-lg overflow-hidden shadow-lg relative border border-gray-100">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2537.499696347108!2d19.9678!3d50.8526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMns!5e0!3m2!1spl!2spl!4v1600000000000!5m2!1spl!2spl" 
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" class="absolute inset-0 transition duration-700">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black text-white py-8 border-t border-gray-900">
+            <div class="max-w-6xl mx-auto px-4 text-center">
+            <div class="flex items-center justify-center gap-3">
+                <img src="logo.jpg" alt="Butik Blanco" class="w-10 h-10 rounded-full object-cover shadow-sm">
+                <span class="font-logo text-2xl mb-2 block">Butik Blanco</span>
+            </div>
+            <p class="text-xs text-gray-500 uppercase tracking-widest">&copy; 2026 Wszystkie prawa zastrzeżone.</p>
+        </div>
+    </footer>
+
+    <script>
+        (function(){
+            const img = document.getElementById('carousel-img');
+            const prev = document.getElementById('prev');
+            const next = document.getElementById('next');
+            const counter = document.getElementById('carousel-counter');
+
+            function setup(images){
+                if(!img){ return; }
+                if(!images || images.length===0){ img.style.opacity=1; img.alt='Brak obrazów'; return; }
+                let idx=0;
+                function show(i){
+                    idx = (i + images.length) % images.length;
+                    img.style.opacity = 0;
+                    setTimeout(()=>{ img.src = images[idx]; img.style.opacity = 1; counter.textContent = (idx+1) + '/' + images.length; }, 200);
+                }
+                prev.addEventListener('click', ()=> show(idx-1));
+                next.addEventListener('click', ()=> show(idx+1));
+                let autoplay = setInterval(()=> show(idx+1), 4000);
+                img.addEventListener('mouseenter', ()=> clearInterval(autoplay));
+                img.addEventListener('mouseleave', ()=> autoplay = setInterval(()=> show(idx+1), 4000));
+                show(0);
+            }
+
+            // Fetch images list (images/images.json)
+            fetch('images/images.json')
+                .then(r => {
+                    if(!r.ok) throw new Error('Brak images/images.json');
+                    return r.json();
+                })
+                .then(images => setup(images))
+                .catch(err => {
+                    console.warn('Nie udało się pobrać images.json, próbuję użyć images/images_list.js jako fallback.', err);
+                    // fallback: try to use window.IMAGES if older images_list.js exists
+                    if(window.IMAGES) setup(window.IMAGES);
+                    else { if(img) { img.style.opacity=1; img.alt='Brak obrazów'; } }
+                });
+        })();
+    </script>
+
+</body>
+</html>
